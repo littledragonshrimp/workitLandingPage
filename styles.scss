@@ -17,10 +17,9 @@ body, *{
     padding: 0;
     font-family: "manrope", sans-serif;
     font-size: 12px;
-    max-width: 100vh;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .underlined {
     font-family: "fraunces", sans-serif;
 }
 main{
@@ -43,12 +42,17 @@ main{
     }
   }
 
-  h1{
+  h1, .underlined{
     font-family: "fraunces", sans-serif;
     font-size: 4rem;
     text-align: center;
     margin: 2rem;
     margin-bottom: 3rem;
+  }
+  .underlined{
+    margin: 0;
+        text-decoration: underline;
+        text-decoration-color: $green;
   }
 
   .intro-card{
@@ -176,12 +180,14 @@ footer{
     flex-direction: column;
     justify-content: center;
     background: $grey;
+    margin-top: -3rem;
 }
 
 .botLogo{
     margin: auto;
     width: 12rem;
     margin-bottom: 2rem;
+    margin-top: 3rem;
 }
 
 .footerLinks{
@@ -196,17 +202,78 @@ footer{
 }
 
 @media screen and (min-width: 900px){ 
-    main{
-        width: 100vh;
+
+    body, *{
+        margin: 0;
+        padding: 0;
     }
+
+    header a{
+        font-size: 2rem;
+        font-weight: 500;
+        margin-right: 5rem;
+    }
+
+    header img{
+        width: 10rem;
+        margin-left: 5rem;
+    }
+
+    .intro-card a{
+        padding: 2rem 4rem 2rem 4rem;
+        font-size: 2.5rem;
+    }
+
+    html{
+        position: relative;
+        top:0;
+        right:0;
+    }
+  
     article{
         display: flex;
         flex-direction: row;
+        min-width: 100vh;
     
     }
-    .intro-card{
-        background-image: url("assets/images/bg-pattern-1.svg");
-        position: 25% 5%;
-        background-repeat: repeat-x;
+    .intro-card, .botContainer{
+        background-image: url(assets/images/bg-pattern-1.svg), url(assets/images/bg-pattern-2.svg);
+        background-position: -10% 0, 100% 50%;
+        background-repeat: no-repeat;
+        h1, .underlined{
+            font-size: 7rem;
+            max-width: 50rem;
+        }
+    }
+
+    .botSection{
+        display: flex;
+        flex-direction: row;
+        background: $grey;
+    }
+    .founderImg{
+        position: relative;
+        top: -5rem;
+        left: 5rem;
+    }
+    .botContainer{
+        position: relative;
+        top: 20rem;
+        right: 4rem;
+        max-width: 70rem;
+        p{
+            margin: 2rem;
+            font-size: 2rem;
+        }
+        a{
+            margin-right: auto;
+            margin-left: 2rem;
+        }
+    }
+    article{
+        padding-bottom: 2rem;
+    }
+    footer{
+        z-index: 10;
     }
 }
