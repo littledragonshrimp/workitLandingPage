@@ -221,14 +221,19 @@ footer {
     flex-direction: row;
     min-width: 100vh;
   }
-  .intro-card, .botContainer {
+  .intro-card {
     background-image: url(assets/images/bg-pattern-1.svg), url(assets/images/bg-pattern-2.svg);
     background-position: -10% 0, 100% 50%;
     background-repeat: no-repeat;
   }
-  .intro-card h1, .intro-card .underlined, .botContainer h1, .botContainer .underlined {
+  .intro-card h1, .intro-card .underlined {
     font-size: 7rem;
     max-width: 50rem;
+  }
+  .botContainer {
+    background-image: url(assets/images/bg-pattern-2.svg);
+    background-position: 100% 80%;
+    background-repeat: no-repeat;
   }
   .botSection {
     display: flex;
