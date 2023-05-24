@@ -251,18 +251,31 @@ footer {
     right: 4rem;
     max-width: 70rem;
   }
+  .botContainer h3 {
+    text-align: left;
+    margin: 3rem 0 1rem 3rem;
+  }
   .botContainer p {
-    margin: 2rem;
+    text-align: left;
+    margin: 3rem;
+    margin-right: 4.5rem;
     font-size: 2rem;
   }
   .botContainer a {
     margin-right: auto;
-    margin-left: 2rem;
+    margin-left: 3rem;
   }
   article {
     padding-bottom: 2rem;
+    border-radius: 0 0 50% 50%/20px;
+  }
+  .botSection {
+    z-index: 5;
+    background: white;
   }
   footer {
     z-index: 10;
+    background: white;
+    padding-top: 20rem;
   }
 }/*# sourceMappingURL=styles.css.map */
